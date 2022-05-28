@@ -140,6 +140,7 @@ const footers = [
 ];
 
 export default function Pricing() {
+  console.log('pricing');
   const classes = useStyles();
 
   return (
