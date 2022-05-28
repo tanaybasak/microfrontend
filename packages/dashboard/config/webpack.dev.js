@@ -10,9 +10,7 @@ const devConfig = {
     },
     devServer: {
         port: 8083,
-        historyApiFallback: {
-            index: 'index.html'
-        },
+        historyApiFallback:true,
         headers: {
             'Access-Control-Allow-Origin': '*'
         }
@@ -24,7 +22,7 @@ const devConfig = {
             exposes: {
                 './DashboardApp': './src/bootstrap'
             },
-            shared: packageJson.dependencies
+            shared : packageJson.dependencies
         }),
         new HtmlWebpackPlugin({
             template: './public/index.html'
