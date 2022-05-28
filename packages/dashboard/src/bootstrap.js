@@ -4,7 +4,6 @@ import Dashboard from './components/Dashboard.vue';
 // mount function to start up the app
 
 const mount = (el) => {
-
     const app = createApp(Dashboard);
     app.mount(el);
 

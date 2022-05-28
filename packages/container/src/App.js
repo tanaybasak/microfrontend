@@ -29,14 +29,11 @@ export default () => {
                 <Header onSignOut={() => setSignedIn(false)} isSignedIn={isSignedIn} />
                 <Suspense fallback={<Progress />}>
                     <Switch>
-                        <Route path="/auth">
+                        <Route  path="/auth">
                             <AuthLazy onSignIn={() => setSignedIn(true)} />
                         </Route>
-                        <Route path="/" component={MarketingLazy}></Route>
-                        <Route path="/dashboard">
-                            { !isSignedIn && <Redirect to='/' />}
-                            <DashboardLazy />
-                        </Route> 
+                        <Route exact path="/" component={MarketingLazy}></Route>
+                        <Route path="/dashboard"  component={DashboardLazy}/>
                     </Switch>
                 </Suspense>
             </div>
