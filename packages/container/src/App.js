@@ -10,7 +10,7 @@ import Progress from './components/Progress';
 const generateClassName = createGenerateClassName({
     productionPrefix: 'co'
 })
-
+//Container component
 export default () => {
     const [isSignedIn, setSignedIn] = useState(false);
     return <BrowserRouter>
